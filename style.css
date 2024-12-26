@@ -8,14 +8,14 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f0f4f8; /* Lighter background for a clean, modern feel */
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    color: #2c3e50;
+    color: #333333; /* Darker text for contrast */
     overflow-x: hidden;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -36,7 +36,7 @@ section {
     padding: 2rem;
     width: 100%;
     max-width: 750px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     margin-top: 30px;
     text-align: left;
@@ -61,7 +61,7 @@ section {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient from red to yellow */
     color: #ffffff;
     padding: 2rem;
     border-radius: 16px 16px 0 0;
@@ -101,7 +101,7 @@ header p {
 
 /* Section Titles */
 h2 {
-    color: #333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     border-bottom: 2px solid #e0e0e0;
@@ -115,7 +115,7 @@ h2::after {
     content: '';
     display: block;
     height: 3px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient underline */
     width: 0;
     transition: width 0.5s ease;
     position: absolute;
@@ -134,11 +134,11 @@ ul {
 }
 
 ul li {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     margin-bottom: 0.75rem;
     padding: 1rem;
     border-radius: 12px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
@@ -151,27 +151,27 @@ ul li:hover {
 }
 
 ul li strong {
-    color: #2575fc;
+    color: #f9d423; /* Yellow color for emphasis */
     font-weight: 600;
 }
 
 ul li::before {
     content: "•";
-    color: #6a11cb;
+    color: #ff4e50; /* Red color for bullet points */
     font-size: 1.5rem;
     margin-right: 0.75rem;
 }
 
 /* Links */
 a {
-    color: #2575fc;
+    color: #ff4e50; /* Red color for links */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #6a11cb;
+    color: #f9d423; /* Yellow color on hover */
     text-decoration: underline;
 }
 
@@ -193,7 +193,7 @@ dl dd {
 blockquote {
     font-style: italic;
     color: #555;
-    border-left: 4px solid #6a11cb;
+    border-left: 4px solid #ff4e50; /* Red border for quotes */
     padding-left: 1rem;
     margin-top: 2rem;
     font-size: 1rem;
@@ -210,7 +210,7 @@ blockquote:hover {
 
 /* Button */
 button {
-    background-color: #2575fc;
+    background-color: #f9d423; /* Yellow button */
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -224,7 +224,7 @@ button {
 }
 
 button:hover {
-    background-color: #6a11cb;
+    background-color: #ff4e50; /* Red button on hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
