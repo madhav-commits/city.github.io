@@ -37,38 +37,43 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-section h2 {
-    font-size: 2rem;
-    color: #fff;
+article {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    font-size: 1.8rem;
+    color: #ff6b6b;
     margin-bottom: 10px;
 }
 
-section p {
+article p {
     font-size: 1.1rem;
     color: #f2f2f2;
     margin-bottom: 15px;
 }
 
-.question {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000000;
-    margin-top: 15px;
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    color: #f2f2f2;
 }
 
-.answer {
-    font-size: 1.1rem;
-    color: #f2f2f2;
-    margin-left: 20px;
+ul li {
+    margin-bottom: 10px;
 }
 
 blockquote {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: #f0a500;
     border-left: 4px solid #ff6b6b;
     padding-left: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -76,7 +81,28 @@ blockquote {
     body {
         padding: 10px;
     }
+
     section {
         padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
     }
 }
