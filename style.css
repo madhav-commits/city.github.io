@@ -8,49 +8,58 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     margin: 0;
-    padding: 20px; /* Adding padding to the body to prevent sticking at the top */
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns content towards the top */
+    align-items: flex-start;
     min-height: 100vh;
+    color: #333; /* Universal text color for a clean look */
 }
 
 /* Main Container */
 section {
-    background-color: white;
-    padding: 2rem;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 30px; /* Adding margin to ensure there's space from the top */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 720px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.6; /* Improves readability */
 }
 
 /* Header */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
-    border-radius: 8px;
+    background-color: #333; /* Darker background for contrast */
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 6px;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
 }
 
 header p {
-    margin: 1rem 0 0;
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #dddddd; /* Slightly muted white for text contrast */
 }
 
 /* Section Titles */
 h2 {
-    color: #4CAF50;
-    margin-bottom: 1rem;
+    color: #333; /* Simple and clean heading color */
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0e0e0; /* Subtle underline for emphasis */
+    padding-bottom: 0.5rem;
 }
 
 /* List Items */
@@ -60,17 +69,18 @@ ul {
 }
 
 ul li {
-    background-color: #e7f7e7;
+    background-color: #f3f3f3; /* Subtle background for list items */
     margin-bottom: 0.5rem;
     padding: 0.75rem;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 0.95rem;
 }
 
 /* Links */
 a {
-    color: #4CAF50;
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 a:hover {
@@ -79,32 +89,43 @@ a:hover {
 
 /* Definition List */
 dl dt {
-    font-weight: bold;
+    font-weight: 600;
     color: #333;
     margin-top: 1rem;
+    font-size: 1rem;
 }
 
 dl dd {
     margin-left: 1.5rem;
-    color: #666;
+    color: #555;
+    font-size: 0.95rem;
 }
 
 /* Blockquote */
 blockquote {
     font-style: italic;
-    color: #555;
-    border-left: 4px solid #4CAF50;
+    color: #666;
+    border-left: 3px solid #333;
     padding-left: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     section {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     header {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
     }
 }
