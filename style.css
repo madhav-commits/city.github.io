@@ -16,6 +16,18 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     color: #2c3e50;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation for the Page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Main Container */
@@ -30,6 +42,21 @@ section {
     text-align: left;
     line-height: 1.8;
     overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Slide-in Animation for Section */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Header */
@@ -40,12 +67,30 @@ header {
     border-radius: 16px 16px 0 0;
     text-align: center;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
     font-size: 2rem;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
+    animation: textReveal 1.5s ease-in-out;
+}
+
+@keyframes textReveal {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 header p {
@@ -62,6 +107,24 @@ h2 {
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 0.5rem;
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    width: 0;
+    transition: width 0.5s ease;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+h2:hover::after {
+    width: 100%;
 }
 
 /* List Items */
@@ -79,6 +142,12 @@ ul li {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 ul li strong {
@@ -98,9 +167,11 @@ a {
     color: #2575fc;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #6a11cb;
     text-decoration: underline;
 }
 
@@ -129,9 +200,15 @@ blockquote {
     background-color: #f9f9f9;
     padding: 1rem 1rem 1rem 1.5rem;
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button (Optional) */
+blockquote:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button */
 button {
     background-color: #2575fc;
     color: #ffffff;
@@ -143,7 +220,7 @@ button {
     cursor: pointer;
     margin-top: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
