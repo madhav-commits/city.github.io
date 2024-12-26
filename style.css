@@ -1,253 +1,82 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8; /* Lighter background for a clean, modern feel */
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    color: #333333; /* Darker text for contrast */
-    overflow-x: hidden;
-    animation: fadeIn 1.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Fade-in Animation for the Page */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Main Container */
-section {
-    background-color: #ffffff;
-    padding: 2rem;
-    width: 100%;
-    max-width: 750px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    margin-top: 30px;
-    text-align: left;
-    line-height: 1.8;
-    overflow: hidden;
-    transform: translateY(20px);
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-}
-
-/* Slide-in Animation for Section */
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Header */
 header {
-    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient from red to yellow */
-    color: #ffffff;
-    padding: 2rem;
-    border-radius: 16px 16px 0 0;
     text-align: center;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-header:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
     font-weight: 600;
-    animation: textReveal 1.5s ease-in-out;
-}
-
-@keyframes textReveal {
-    from {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    color: #ff6b6b;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    color: #eaeaea;
+    font-size: 1.2rem;
+    color: #f2f2f2;
 }
 
-/* Section Titles */
-h2 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 0.5rem;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient underline */
-    width: 0;
-    transition: width 0.5s ease;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-}
-
-h2:hover::after {
+section {
     width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #f0a500);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* List Items */
-ul {
-    list-style: none;
-    padding: 0;
+section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-ul li {
-    background-color: #ffffff;
-    margin-bottom: 0.75rem;
-    padding: 1rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+section p {
+    font-size: 1.1rem;
+    color: #f2f2f2;
+    margin-bottom: 15px;
 }
 
-ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-ul li strong {
-    color: #f9d423; /* Yellow color for emphasis */
+.question {
+    font-size: 1.2rem;
     font-weight: 600;
+    color: #ff6b6b;
+    margin-top: 15px;
 }
 
-ul li::before {
-    content: "•";
-    color: #ff4e50; /* Red color for bullet points */
-    font-size: 1.5rem;
-    margin-right: 0.75rem;
+.answer {
+    font-size: 1.1rem;
+    color: #f2f2f2;
+    margin-left: 20px;
 }
 
-/* Links */
-a {
-    color: #ff4e50; /* Red color for links */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #f9d423; /* Yellow color on hover */
-    text-decoration: underline;
-}
-
-/* Definition List */
-dl dt {
-    font-weight: 600;
-    color: #2c3e50;
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-
-dl dd {
-    margin-left: 1.5rem;
-    color: #555;
-    font-size: 0.95rem;
-}
-
-/* Blockquote */
 blockquote {
+    font-size: 1.4rem;
     font-style: italic;
-    color: #555;
-    border-left: 4px solid #ff4e50; /* Red border for quotes */
-    padding-left: 1rem;
-    margin-top: 2rem;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    padding: 1rem 1rem 1rem 1.5rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f0a500;
+    border-left: 4px solid #ff6b6b;
+    padding-left: 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
-blockquote:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Button */
-button {
-    background-color: #f9d423; /* Yellow button */
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff4e50; /* Red button on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
     section {
-        padding: 1.5rem;
-    }
-
-    header {
-        padding: 1.5rem;
-    }
-
-    header h1 {
-        font-size: 1.7rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
+        padding: 15px;
     }
 }
