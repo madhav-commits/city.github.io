@@ -13,12 +13,6 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-header:hover {
-    transform: scale(1.02);
-    color: #f0a500;
 }
 
 header h1 {
@@ -26,12 +20,17 @@ header h1 {
     font-weight: 600;
     color: #ff6b6b;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #f0a500;
 }
 
 header p {
     font-size: 1.2rem;
     color: #f2f2f2;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 header p:hover {
@@ -46,11 +45,10 @@ section {
     border-radius: 10px;
     background: linear-gradient(45deg, #ff6b6b, #f0a500);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -60,7 +58,7 @@ article {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 article:hover {
@@ -71,7 +69,7 @@ article h2 {
     font-size: 1.8rem;
     color: #ff6b6b;
     margin-bottom: 10px;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 article h2:hover {
@@ -82,7 +80,7 @@ article p {
     font-size: 1.1rem;
     color: #f2f2f2;
     margin-bottom: 15px;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
 }
 
 article p:hover {
@@ -97,7 +95,7 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 ul li:hover {
@@ -112,7 +110,7 @@ blockquote {
     padding-left: 20px;
     margin-top: 20px;
     text-align: center;
-    transition: box-shadow 0.2s ease, color 0.2s ease;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
 }
 
 blockquote:hover {
@@ -123,7 +121,7 @@ blockquote:hover {
 a {
     color: #f0a500;
     text-decoration: none;
-    transition: color 0.2s ease, text-decoration 0.2s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
