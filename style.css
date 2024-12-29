@@ -13,11 +13,11 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 header:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     color: #f0a500;
 }
 
@@ -31,6 +31,11 @@ header h1 {
 header p {
     font-size: 1.2rem;
     color: #f2f2f2;
+    transition: color 0.2s ease;
+}
+
+header p:hover {
+    color: #f0a500;
 }
 
 section {
@@ -40,77 +45,118 @@ section {
     padding: 20px;
     border-radius: 10px;
     background: linear-gradient(45deg, #ff6b6b, #f0a500);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-section h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 10px;
+article {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-section p {
-    font-size: 1.1rem;
-    color: #f2f2f2;
-    margin-bottom: 15px;
+article:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.question {
-    font-size: 1.2rem;
-    font-weight: 600;
+article h2 {
+    font-size: 1.8rem;
     color: #ff6b6b;
-    margin-top: 15px;
-    transition: color 0.3s ease;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
 }
 
-.question:hover {
+article h2:hover {
     color: #f0a500;
 }
 
-.answer {
+article p {
     font-size: 1.1rem;
     color: #f2f2f2;
+    margin-bottom: 15px;
+    transition: opacity 0.2s ease;
+}
+
+article p:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: square;
     margin-left: 20px;
+    color: #f2f2f2;
+}
+
+ul li {
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+ul li:hover {
+    color: #ff6b6b;
 }
 
 blockquote {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: #f0a500;
     border-left: 4px solid #ff6b6b;
     padding-left: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: box-shadow 0.2s ease, color 0.2s ease;
 }
 
 blockquote:hover {
-    background-color: rgba(255, 107, 107, 0.1);
     color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 a {
     color: #f0a500;
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {
     color: #ff6b6b;
-    text-shadow: 0 0 5px #ff6b6b;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
+
     section {
         padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
     }
 }
