@@ -13,6 +13,12 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.05);
+    color: #f0a500;
 }
 
 header h1 {
@@ -35,6 +41,12 @@ section {
     border-radius: 10px;
     background: linear-gradient(45deg, #ff6b6b, #f0a500);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 section h2 {
@@ -54,6 +66,11 @@ section p {
     font-weight: 600;
     color: #ff6b6b;
     margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.question:hover {
+    color: #f0a500;
 }
 
 .answer {
@@ -70,6 +87,23 @@ blockquote {
     padding-left: 20px;
     margin-top: 40px;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+blockquote:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+}
+
+a {
+    color: #f0a500;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b6b;
+    text-shadow: 0 0 5px #ff6b6b;
 }
 
 @media (max-width: 768px) {
