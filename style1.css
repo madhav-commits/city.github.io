@@ -13,6 +13,12 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+header:hover {
+    transform: rotate(-1deg) scale(1.02);
+    letter-spacing: 2px;
 }
 
 header h1 {
@@ -24,7 +30,12 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
-    color: #000000;
+    color: #f2f2f2;
+    transition: text-shadow 0.3s ease;
+}
+
+header p:hover {
+    text-shadow: 0 0 10px #f0a500;
 }
 
 section {
@@ -35,6 +46,12 @@ section {
     border-radius: 10px;
     background: linear-gradient(45deg, #ff6b6b, #f0a500);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: border-radius 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    border-radius: 20px;
 }
 
 article {
@@ -43,28 +60,56 @@ article {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+article:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05) rotate(2deg);
 }
 
 article h2 {
     font-size: 1.8rem;
     color: #ff6b6b;
     margin-bottom: 10px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+article h2:hover {
+    font-size: 2rem;
+    color: #f0a500;
 }
 
 article p {
     font-size: 1.1rem;
-    color: #000000;
-    margin-bottom: 15px;
+    color: #f2f2f2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+article p:hover {
+    opacity: 0.8;
+    transform: translateX(10px);
 }
 
 ul {
     list-style-type: square;
     margin-left: 20px;
     color: #f2f2f2;
+    transition: margin-left 0.3s ease;
+}
+
+ul:hover {
+    margin-left: 30px;
 }
 
 ul li {
     margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    color: #ff6b6b;
 }
 
 blockquote {
@@ -75,6 +120,23 @@ blockquote {
     padding-left: 20px;
     margin-top: 20px;
     text-align: center;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+}
+
+blockquote:hover {
+    box-shadow: 0 0 15px #ff6b6b;
+    color: #ff6b6b;
+}
+
+a {
+    color: #f0a500;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px #ff6b6b;
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
