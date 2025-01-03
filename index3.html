@@ -3,111 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Reflection</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Nature, Efficiency, and Algorithm Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #00509e;
+        }
+
+        h1 {
+            border-bottom: 2px solid #00509e;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subsection {
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #00509e;
+            color: white;
+        }
+
+        .challenges, .tips {
+            font-style: italic;
+            color: #555;
+        }
+
+        .tips {
+            font-weight: bold;
+            color: #00509e;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Portfolio Reflection</h1>
-    </header>
-    <main>
-        <section>
-            <h2>1. How do you determine the most efficient approach when solving a complex problem?</h2>
-            <p>To determine the most efficient approach, I:</p>
-            <ul>
-                <li><strong>Analyze the Problem:</strong> Break it down to understand its constraints, input size, and expected output.</li>
-                <li><strong>Evaluate Algorithmic Options:</strong> Compare possible solutions based on their time and space complexities.</li>
-                <li><strong>Consider Constraints:</strong> For example, if real-time processing is required, prioritize time efficiency over space.</li>
-                <li><strong>Test Feasibility:</strong> Use sample inputs to ensure the algorithm handles edge cases effectively.</li>
-            </ul>
-        </section>
+    <h1>Nature, Efficiency, and Algorithm Design</h1>
 
-        <section>
-            <h2>2. What criteria do you use to evaluate the effectiveness of a solution?</h2>
-            <ul>
-                <li><strong>Efficiency:</strong> Does the solution run within acceptable time and space limits?</li>
-                <li><strong>Scalability:</strong> Can it handle large datasets or increased input sizes?</li>
-                <li><strong>Robustness:</strong> Does it work correctly across all edge cases?</li>
-                <li><strong>Maintainability:</strong> Is the code readable and easy to modify for future requirements?</li>
-                <li><strong>Simplicity:</strong> Avoid unnecessary complexity while meeting requirements.</li>
-            </ul>
-        </section>
+    <div class="section">
+        <h2>1. Problems in Nature: Iteration, Recursion, and Backtracking</h2>
+        <h3>Iteration</h3>
+        <p>Iteration is seen in nature through repetitive cycles that continue over time. For example:</p>
+        <ul>
+            <li>Cell division process (mitosis).</li>
+            <li>Seasonal migration patterns of animals, such as birds.</li>
+            <li>The water cycle with repeated phases of evaporation, condensation, and precipitation.</li>
+        </ul>
 
-        <section>
-            <h2>3. Reflect on a situation where you need to balance multiple conflicting constraints in a design. What approach did you take?</h2>
-            <p><strong>Example:</strong> Designing an algorithm for a real-time train scheduling system.</p>
-            <ul>
-                <li><strong>Conflicting Constraints:</strong> Real-time responsiveness (time efficiency) vs. accurate predictions based on large datasets (space efficiency).</li>
-                <li><strong>Approach:</strong>
-                    <ul>
-                        <li>Used <em>greedy algorithms</em> for quick decisions on immediate scheduling.</li>
-                        <li>Employed <em>dynamic programming</em> for long-term optimizations, running in the background.</li>
-                        <li>Cached intermediate results to reduce redundant calculations.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+        <h3>Recursion</h3>
+        <p>Recursion appears in nature through self-similar structures. Examples include:</p>
+        <ul>
+            <li>Trees exhibiting recursive branching patterns.</li>
+            <li>DNA replication, where each strand guides the creation of its complementary strand.</li>
+            <li>Fibonacci sequence patterns in plants.</li>
+        </ul>
 
-        <section>
-            <h2>4. How do you decide when to prioritize simplicity over optimization in a solution?</h2>
-            <ul>
-                <li><strong>Problem Context:</strong> If the problem is well-defined, small-scale, or needs rapid prototyping, simplicity is prioritized.</li>
-                <li><strong>Resource Constraints:</strong> Limited time or computational resources favor simple solutions.</li>
-                <li><strong>Future Scope:</strong> If a solution is likely to evolve, simplicity ensures maintainability.</li>
-            </ul>
-            <p><strong>Example:</strong> For a classroom project, I prioritize simplicity to ensure the solution is understandable and meets learning objectives.</p>
-        </section>
+        <h3>Backtracking</h3>
+        <p>Backtracking is common in problem-solving processes in nature:</p>
+        <ul>
+            <li>Animals retrace steps when a path is unfruitful.</li>
+            <li>The immune system tries alternative strategies when initial responses fail.</li>
+            <li>Climbing plants adjust direction when encountering obstacles.</li>
+        </ul>
+    </div>
 
-        <section>
-            <h2>5. Reflect on how breaking down a problem into smaller components can help you approach it more effectively.</h2>
-            <p><strong>Example:</strong> Implementing a dynamic programming solution for the Knapsack problem.</p>
-            <ul>
-                <li><strong>Breaking Down:</strong>
-                    <ul>
-                        <li>Divided the problem into subproblems (smaller weight capacities and items).</li>
-                        <li>Solved each subproblem iteratively and used the results to build the final solution.</li>
-                    </ul>
-                </li>
-                <li><strong>Benefits:</strong> Simplifies debugging, improves clarity, and helps identify patterns in the problem.</li>
-            </ul>
-        </section>
+    <div class="section">
+        <h2>2. Space and Time Efficiency: Significance and Growth Orders</h2>
+        <h3>Definition and Importance</h3>
+        <ul>
+            <li><strong>Time Efficiency:</strong> Determines how well an algorithm scales with input size.</li>
+            <li><strong>Space Efficiency:</strong> Crucial for systems with limited memory.</li>
+        </ul>
+        <p>The choice often involves trade-offs between time and space usage.</p>
 
-        <section>
-            <h2>6. Reflect on the trade-offs while choosing between different approaches to solve a problem.</h2>
-            <p><strong>Example:</strong> Choosing between Merge Sort and Quick Sort.</p>
-            <ul>
-                <li><strong>Trade-Offs:</strong>
-                    <ul>
-                        <li>Merge Sort is stable and predictable (
-(O(n log n)) but uses more space (
-O(n)).</li>
-                        <li>Quick Sort is faster on average but has a worst-case time complexity of (
-O(n
-2)).</li>
-                    </ul>
-                </li>
-                <li><strong>Decision:</strong> For large datasets where stability matters, I choose Merge Sort; for in-memory operations with small datasets, Quick Sort is preferable.</li>
-            </ul>
-        </section>
+        <h3>Orders of Growth</h3>
+        <table>
+            <tr><th>Order</th><th>Growth Type</th><th>Example</th></tr>
+            <tr><td>O(1)</td><td>Constant</td><td>Accessing an array element by index</td></tr>
+            <tr><td>O(log n)</td><td>Logarithmic</td><td>Binary search</td></tr>
+            <tr><td>O(n)</td><td>Linear</td><td>Iterating through an array</td></tr>
+            <tr><td>O(n log n)</td><td>Linearithmic</td><td>Merge sort</td></tr>
+            <tr><td>O(n²)</td><td>Quadratic</td><td>Bubble sort</td></tr>
+            <tr><td>O(2<sup>n</sup>)</td><td>Exponential</td><td>Brute force solutions</td></tr>
+            <tr><td>O(n!)</td><td>Factorial</td><td>Evaluating all permutations</td></tr>
+        </table>
+    </div>
 
-        <section>
-            <h2>7. How do you identify and address potential limitations or weaknesses in a proposed solution?</h2>
-            <ul>
-                <li><strong>Stress Testing:</strong> Run the solution on edge cases and large datasets to identify weaknesses.</li>
-                <li><strong>Performance Profiling:</strong> Measure time and space usage to detect bottlenecks.</li>
-                <li><strong>Feedback:</strong> Seek peer reviews to catch overlooked issues.</li>
-                <li><strong>Refinement:</strong> Optimize code sections with the highest impact, such as reducing redundant operations.</li>
-            </ul>
-        </section>
+    <div class="section">
+        <h2>3. Design Principles: Chapter 2 Takeaways</h2>
+        <ul>
+            <li><strong>Decomposition:</strong> Breaking problems into smaller parts (e.g., zombie detection tasks).</li>
+            <li><strong>Pattern Recognition:</strong> Identifying recurring structures in problems.</li>
+            <li><strong>Abstraction:</strong> Focusing on size, position, and relationships while ignoring irrelevant details.</li>
+            <li><strong>Cautious and Bold Travel:</strong> BFS for level-wise exploration; DFS for deep exploration.</li>
+            <li><strong>Pruning:</strong> Eliminating invalid paths early (e.g., N-Queens problem).</li>
+            <li><strong>Memoization:</strong> Avoiding redundant work by storing intermediate results.</li>
+            <li><strong>Lazy Propagation:</strong> Delaying updates until absolutely necessary.</li>
+        </ul>
+    </div>
 
-        <section>
-            <h2>8. How do you decide when to innovate versus relying on tried-and-tested solutions?</h2>
-            <ul>
-                <li><strong>Problem Novelty:</strong> If a problem aligns closely with existing solutions, I start with tried-and-tested methods.</li>
-                <li><strong>Opportunity for Improvement:</strong> If existing methods fall short in efficiency or scalability, I innovate by adapting or creating new solutions.</li>
-            </ul>
-            <p><strong>Example:</strong> For navigating train overcrowding, I innovated by integrating real-time passenger density data into Dijkstra’s algorithm.</p>
-        </section>
-    </main>
-</body>
-</html>
+    <div class="section">
+        <h2>4. Trees and Optimization Techniques</h2>
+        <ul>
+            <li><strong>Binary Trees:</strong> Simple but unbalanced structures.</li>
+            <li><strong>Binary Search Trees:</strong> Efficient but can degrade to O(n) without balancing.</li>
+            <li><strong>AVL Trees:</strong> Self-balancing, maintaining O(log n) height.</li>
+            <li><strong>Red-Black Trees:</strong> Balanced with fewer rotations than AVL trees.</li>
+            <li><strong>Tries:</strong> Specialized for string operations and prefix queries.</li>
+            <li><strong>Heaps:</strong> Priority queues with O(1) access to the max/min element.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Array Query Algorithms</h2>
+        <ul>
+            <li><strong>Lookup Table:</strong> Precomputed data for fast O(1) lookups.</li>
+            <li><strong>Segment Trees:</strong> Efficient for range queries and updates in O(log n).</li>
+            <li><strong>Sparse Table:</strong> Constant-time range queries for static data.</li>
+            <li><strong>Fenwick Trees:</strong> Logarithmic-time prefix sums and range queries.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Trees vs. Graphs: Key Differences and Applications</h2>
+        <table>
+            <tr>
+                <th>Aspect</th>
+                <th>Tree</th>
+                <th>Graph</th>
+            </tr>
+            <tr>
+                <td>Structure</td>
+                <td>Hierarchical, no cycles</td>
+                <td>Can be cyclic or acyclic</td>
+            </tr>
+            <tr>
+                <td>Connections</td>
+                <td>Each node has one parent (except root)</td>
+                <td>Nodes can have multiple connections</td>
+            </tr>
+            <tr>
+                <td>Root Node</td>
+                <td>Single root</td>
+                <td>No single root</td>
+            </tr>
+            <tr>
+                <td>Traversal</td>
+                <td>Preorder, Inorder, Postorder</td>
+                <td>DFS, BFS</td>
+            </tr>
+            <tr>
+                <td>Applications</td>
+                <td>File systems, expression trees</td>
+                <td>Social networks, routing</td>
+            </tr>
+        </table>
