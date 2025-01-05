@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithmic Concepts and Applications</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <section>
@@ -17,26 +17,18 @@
         <article>
             <h2>1. Time Complexity Analysis</h2>
             <p><strong>Concept:</strong> Time complexity helps determine the efficiency of an algorithm by measuring how its runtime grows relative to the input size. It is expressed using notations like O(n), O(log n), etc.</p>
+            <img src="images/time-complexity-example.png" alt="Time Complexity Example" style="width:100%;max-width:600px;">
             <ul>
                 <li><strong>Challenges in Learning/Understanding:</strong>
                     <ul>
                         <li>Understanding how nested loops or recursion contribute to time complexity can be hard initially.</li>
                         <li>Differentiating between best-case, worst-case, and average-case complexities.</li>
-                        <li>Identifying time complexities in unfamiliar algorithms like divide-and-conquer.</li>
                     </ul>
                 </li>
                 <li><strong>Challenges in Real-World Applications:</strong>
                     <ul>
                         <li>Translating theoretical complexity into real-world performance metrics.</li>
-                        <li>Handling scenarios where algorithms with better theoretical complexity (e.g., O(log n)) perform poorly due to high constant factors or memory limitations.</li>
-                        <li>In real-time systems, even a theoretically fast algorithm may not meet strict time constraints.</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Analyze problem constraints: For small inputs, simpler algorithms (e.g., O(n²)) might suffice; for large inputs, prioritize O(n log n) solutions.</li>
-                        <li>Use profiling tools to measure real-world performance and adjust the algorithm if needed.</li>
-                        <li>Example: In searching, binary search (O(log n)) is preferred over linear search (O(n)) when the data is sorted.</li>
+                        <li>Handling scenarios where algorithms with better theoretical complexity perform poorly due to high constant factors.</li>
                     </ul>
                 </li>
             </ul>
@@ -45,26 +37,11 @@
         <article>
             <h2>2. Binary Search Tree (BST)</h2>
             <p><strong>Concept:</strong> A binary search tree is a hierarchical data structure where nodes are arranged so that the left subtree contains smaller elements and the right subtree contains larger elements.</p>
+            <img src="images/bst-example.png" alt="Binary Search Tree Example" style="width:100%;max-width:600px;">
             <ul>
                 <li><strong>Challenges in Learning/Understanding:</strong>
                     <ul>
                         <li>Visualizing tree structures and their dynamic updates during insertion and deletion.</li>
-                        <li>Implementing self-balancing BSTs (e.g., AVL Trees) to maintain efficiency.</li>
-                        <li>Handling edge cases like skewed trees where efficiency degrades to O(n).</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Difficulty in understanding how BSTs are used in databases for efficient data retrieval.</li>
-                        <li>In dynamic datasets, maintaining a balanced BST is computationally expensive.</li>
-                        <li>Real-world applications often involve advanced variants like B-Trees instead of simple BSTs.</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use BSTs when quick insertions, deletions, and lookups are required in dynamic datasets.</li>
-                        <li>If balancing is critical, use AVL or Red-Black trees for guaranteed O(log n) performance.</li>
-                        <li>Example: When designing a range query system, a balanced BST ensures fast lookups.</li>
                     </ul>
                 </li>
             </ul>
@@ -73,141 +50,31 @@
         <article>
             <h2>3. DFS and BFS (Graph Traversals)</h2>
             <p><strong>Concept:</strong> DFS explores nodes as deep as possible before backtracking, while BFS explores nodes level by level.</p>
-            <ul>
-                <li><strong>Challenges in Learning/Understanding:</strong>
-                    <ul>
-                        <li>Understanding recursion in DFS and implementing it using stacks for iterative solutions.</li>
-                        <li>Identifying when to use BFS or DFS depending on the problem (e.g., shortest path vs. connected components).</li>
-                        <li>Handling edge cases like cycles in graphs, disconnected graphs, and infinite loops.</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Applying BFS for shortest path problems in unweighted graphs and adapting it for real-world scenarios like traffic routing.</li>
-                        <li>Handling memory issues when using BFS for large graphs with high branching factors.</li>
-                        <li>Understanding how DFS is used in topological sorting and other advanced graph algorithms.</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use BFS for shortest path problems or scenarios requiring exploration level by level.</li>
-                        <li>Use DFS for backtracking problems (e.g., solving mazes) or detecting cycles in graphs.</li>
-                        <li>Example: BFS can be used in social network applications to find the shortest path between two users.</li>
-                    </ul>
-                </li>
-            </ul>
+            <img src="images/dfs-bfs-example.png" alt="DFS and BFS Example" style="width:100%;max-width:600px;">
         </article>
 
         <article>
             <h2>4. Heap</h2>
             <p><strong>Concept:</strong> A heap is a binary tree-based structure that maintains the heap property, where the root is the minimum (min-heap) or maximum (max-heap) element.</p>
-            <ul>
-                <li><strong>Challenges in Learning/Understanding:</strong>
-                    <ul>
-                        <li>Visualizing heap construction using array representation can be difficult.</li>
-                        <li>Implementing heaps manually, especially for dynamic insertions and deletions.</li>
-                        <li>Understanding heapify operations and their time complexities (O(log n)).</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Using heaps in scenarios requiring frequent updates, like real-time scheduling.</li>
-                        <li>Optimizing heap-based priority queues for massive datasets.</li>
-                        <li>Adapting heap properties for non-traditional use cases, like approximate searching.</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use heaps for scenarios requiring frequent access to the smallest or largest elements (e.g., priority queues).</li>
-                        <li>Pair heaps with other data structures (e.g., hash maps) to improve performance in complex applications.</li>
-                        <li>Example: In event scheduling systems, min-heaps ensure efficient task prioritization.</li>
-                    </ul>
-                </li>
-            </ul>
+            <img src="images/heap-example.png" alt="Heap Example" style="width:100%;max-width:600px;">
         </article>
 
         <article>
             <h2>5. Sorting Algorithms</h2>
-            <p><strong>Concept:</strong> Sorting involves arranging data in a particular order (ascending or descending). Algorithms like quicksort, mergesort, and bubble sort are common.</p>
-            <ul>
-                <li><strong>Challenges in Learning/Understanding:</strong>
-                    <ul>
-                        <li>Memorizing the time complexities and stability of different algorithms.</li>
-                        <li>Understanding recursive approaches like mergesort and quicksort.</li>
-                        <li>Debugging sorting implementations, especially in-place algorithms like quicksort.</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Selecting the best sorting algorithm for specific datasets (e.g., small vs. large data).</li>
-                        <li>Handling real-world constraints like memory limits, which make in-place sorting critical.</li>
-                        <li>Optimizing sorting in distributed systems (e.g., map-reduce sorting).</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use quicksort for general-purpose, in-place sorting.</li>
-                        <li>Use mergesort when stable sorting is required.</li>
-                        <li>Example: E-commerce platforms use efficient sorting to display products by price or ratings.</li>
-                    </ul>
-                </li>
-            </ul>
+            <p><strong>Concept:</strong> Sorting involves arranging data in a particular order (ascending or descending).</p>
+            <img src="images/sorting-algorithms-example.png" alt="Sorting Algorithms Example" style="width:100%;max-width:600px;">
         </article>
 
         <article>
             <h2>6. Pattern Searching</h2>
             <p><strong>Concept:</strong> Algorithms like KMP and Rabin-Karp search for substrings efficiently within larger strings.</p>
-            <ul>
-                <li><strong>Challenges in Learning/Understanding:</strong>
-                    <ul>
-                        <li>Grasping advanced preprocessing techniques like partial match tables in KMP.</li>
-                        <li>Debugging pattern-matching algorithms with overlapping substrings.</li>
-                        <li>Understanding the trade-offs between naive and optimized approaches.</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Implementing pattern searching in large-scale applications like search engines.</li>
-                        <li>Adapting algorithms to handle noisy data or approximate matches (e.g., DNA sequencing).</li>
-                        <li>Optimizing performance for streaming data.</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use naive algorithms for small datasets.</li>
-                        <li>Use KMP or Rabin-Karp for larger datasets requiring preprocessing.</li>
-                        <li>Example: Search engines use pattern searching to index and retrieve relevant documents.</li>
-                    </ul>
-                </li>
-            </ul>
+            <img src="images/pattern-searching-example.png" alt="Pattern Searching Example" style="width:100%;max-width:600px;">
         </article>
 
         <article>
             <h2>7. Graph Algorithms</h2>
             <p><strong>Concept:</strong> Algorithms for solving graph problems include Dijkstra’s (shortest path), Kruskal’s (MST), etc.</p>
-            <ul>
-                <li><strong>Challenges in Learning/Understanding:</strong>
-                    <ul>
-                        <li>Understanding graph representations (adjacency matrix vs. adjacency list).</li>
-                        <li>Debugging infinite loops or incorrect results due to unhandled edge cases.</li>
-                        <li>Implementing complex algorithms like Dijkstra’s with priority queues.</li>
-                    </ul>
-                </li>
-                <li><strong>Challenges in Real-World Applications:</strong>
-                    <ul>
-                        <li>Scaling graph algorithms to handle large datasets in social networks or transport systems.</li>
-                        <li>Adapting algorithms to work on dynamic graphs where edges or weights change frequently.</li>
-                        <li>Optimizing for distributed graph processing (e.g., in Google Maps).</li>
-                    </ul>
-                </li>
-                <li><strong>Determining the Most Efficient Approach:</strong>
-                    <ul>
-                        <li>Use Dijkstra’s for weighted, single-source shortest paths; use BFS for unweighted graphs.</li>
-                        <li>Optimize MST algorithms based on edge density (Kruskal’s for sparse, Prim’s for dense graphs).</li>
-                        <li>Example: Dijkstra’s algorithm is used in GPS navigation systems for route optimization.</li>
-                    </ul>
-                </li>
-            </ul>
+            <img src="images/graph-algorithms-example.png" alt="Graph Algorithms Example" style="width:100%;max-width:600px;">
         </article>
     </section>
 </body>
